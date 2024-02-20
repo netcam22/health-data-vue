@@ -1,7 +1,8 @@
-const useRandomData = (arrayLength) => {
+const useRandomData = (valuesPerChart, noOfCharts, refeshChartCount) => {
 
-	return Array.from({ length: arrayLength }, 
-        () => Math.floor(Math.random() * 10*arrayLength+1));
+	return Array(valuesPerChart).fill([]).map(() => 
+    Array(noOfCharts).fill([]).map(() => 
+    Math.floor(Math.random() * 10*valuesPerChart+refeshChartCount)));
 }
 
 export default useRandomData;
