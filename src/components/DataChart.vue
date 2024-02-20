@@ -7,8 +7,8 @@ ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
 const chartData = computed(() => {
     return {
-        labels: [ 'January', 'February', 'March', 'April' ],
-        datasets: [ { data: [40, 20, 12, 10] } ]
+        labels: [ 'Adherence', 'Combination therapy', 'Dosing', 'Guidelines', 'Safety', 'Other'],
+        datasets: [ { data: [19, 23, 17, 21, 19, 1] } ]
     }
 });
 const chartOptions = computed(() => {
