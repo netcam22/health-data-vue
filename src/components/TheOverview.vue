@@ -1,5 +1,6 @@
 <script setup>
 import CallItem from './CallItem.vue';
+import DataChart from './DataChart.vue';
 defineProps({
     title: String,
     data: {
@@ -19,4 +20,5 @@ defineProps({
     :title="key"
     :content="item"
     />
+    <DataChart />
 </template>
