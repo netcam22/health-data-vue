@@ -14,13 +14,23 @@ const optionsData = computed(() => usePercentageArray(dataValues.value));
 const chartData = computed(() => {
     return {
         labels: OPTIONS_LABELS.value,
-        datasets: [ { data:  optionsData.value} ]
+        datasets: [ { data:  optionsData.value},{ data:  optionsData.value},{ data:  optionsData.value},
+        { data:  optionsData.value},{ data:  optionsData.value},{ data:  optionsData.value}]
     }
 });
 const chartOptions = computed(() => {
     return {
-        responsive: true
-    }
+        responsive: true,
+        indexAxis: 'y',
+        scales: {
+            x: {
+            stacked: true
+            },
+            y: {
+            stacked: true
+            }
+        }
+        }
 });
 
 function updateDataValues() {
