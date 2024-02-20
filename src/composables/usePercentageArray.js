@@ -1,4 +1,6 @@
-const usePercentageArray = (length) => {
-    return [19, 23, 17, 21, 19, 1];
+const usePercentageArray = (dataValues) => {
+
+    const valuesTotal = dataValues.reduce((count, value) => count+value, 0);
+    return dataValues.map(value => Math.ceil(value/valuesTotal*100));
 }
 export default usePercentageArray;
