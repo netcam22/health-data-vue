@@ -1,19 +1,20 @@
 <script setup>
 import TheOverview from '@/components/TheOverview.vue';
-const title = "Overview";
-const chartTitle = "Detailing topic breakdown";
-const overviewData = {
-      Date: ["Tomorrow, 3pm", "18 February 2023"],
-      Account: ["Dr. Clinton Ackerman"],
-      Speciality: ["Respiratory therapist", "Assistive therapy"],
-      Profiling: ["Confident"]
-}
+import {title, callTitle, chartTitle, donutTitle, overviewData}
+from '@/data/callData';
 </script>
 
 <template>
   <section class = "overview">
+    <h1 class = "overview__heading">{{title}}</h1>
+    <div class = "overview__container">
+    <h2 class = "overview__sub-heading">{{ callTitle }}</h2>
+    <h2 class = "overview__sub-heading">{{ donutTitle }}</h2>
+  </div>
     <TheOverview 
     :title="title" 
+    :callTitle="callTitle"
+    :donutTitle="donutTitle"
     :chartTitle="chartTitle" 
     :data="overviewData"/>
   </section>
@@ -24,7 +25,22 @@ const overviewData = {
     flex-basis: 70%;
     min-width: 70vw;
     box-sizing: border-box;
-    flex-direction: column;
-    align-items: flex-start;
+
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__heading {
+      font-size: 25px;
+      margin: 20px 10px 20px 20px;
+      padding: 0;
+    }
+
+    &__sub-heading {
+      font-size: 25px;
+      margin: 5px 10px 10px 20px;
+      padding: 0;
+    }
   }
 </style>

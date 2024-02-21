@@ -24,14 +24,11 @@ const chartData = computed(() => {
     }
 });
 
-const myStyles = computed(() => {
-    return {
+const chartStyles = {
         height: "38vw",
         width: "68vh",
         position: 'relative',
-    }
 }
-)
 
 const chartOptions = computed(() => {
     return {
@@ -104,7 +101,6 @@ const chartOptions = computed(() => {
                 },
                 callbacks: {
                     label: ((tooltipItems) => {
-                        console.log(tooltipItems)
                         return `${tooltipItems.formattedValue}%`
                     }),
                     title: () => {return null}
@@ -122,14 +118,14 @@ function updateDataValues() {
 
 <template>
     <div class = chart-container>
+        <button class = "chart-container__button" @click="updateDataValues">Refresh data</button>
     <Bar
     aria-label="Detailing topic breakdown"
         id="my-chart-id"
         :options="chartOptions"
         :data="chartData"
-        :styles="myStyles" 
-    />
-    <button @click="updateDataValues">Update data</button>
+        :styles="chartStyles" 
+    /> 
 </div>
 </template>
 
@@ -142,6 +138,20 @@ function updateDataValues() {
     flex-basis: 60%;
     flex-grow: 3;
     padding: 1vw;
+
+    &__button {
+        background-color: $white;
+        border: 1px solid $dark-text;
+        padding: 5px;
+        font-size: 15px;
+        margin: 2px 2px 2px 25px;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $global-grey;
+        }
+    }
 
     @include respond-small {
         height: 70vh;

@@ -5,6 +5,22 @@ $sidebar-hover: rgba(255, 255, 255, 0.2);
 $white: #FFF;
 $dark-text: #333333;
 
+/* Font: Montserrat[Font]
+"https://fonts.google.com/specimen/Montserrat"
+Accessed 21/2/24 */
+@font-face {
+    font-family: "Montserrat";
+    src: url("/src/assets/fonts/Montserrat-Regular.ttf");
+}
+
+/* Font: Roboto[Font]
+"https://fonts.google.com/specimen/Roboto"
+Accessed 21/2/24 */
+@font-face {
+    font-family: "Roboto";
+    src: url("/src/assets/fonts/Roboto-Regular.ttf");
+}
+
 @mixin respond-small {
     @media (min-width: 600px) { @content };
 }

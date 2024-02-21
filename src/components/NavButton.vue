@@ -34,6 +34,7 @@ defineProps({
     opacity: 100%;
     border: none;
     cursor: pointer;
+    text-align: left;
     }
 }
 
