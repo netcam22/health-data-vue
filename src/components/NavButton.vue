@@ -35,6 +35,7 @@ defineProps({
     border: none;
     cursor: pointer;
     text-align: left;
+    font-family: "Montserrat";
     }
 }
 

@@ -37,6 +37,7 @@ import {menuItems} from '@/data/globalData';
   line-height: 2;
   margin: 0;
   padding: 2% 0;
+  font-family: "Montserrat";
 
   &__list {
     display: flex;

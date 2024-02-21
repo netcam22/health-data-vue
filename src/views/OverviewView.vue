@@ -32,13 +32,13 @@ from '@/data/callData';
     }
 
     &__heading {
-      font-size: 25px;
+      font-size:56px;
       margin: 20px 10px 20px 20px;
       padding: 0;
     }
 
     &__sub-heading {
-      font-size: 25px;
+      font-size: 36px;
       margin: 5px 10px 10px 20px;
       padding: 0;
     }

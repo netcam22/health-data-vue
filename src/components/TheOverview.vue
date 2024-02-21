@@ -49,7 +49,7 @@ defineProps({
   }
 }
 .chart-heading {
-      font-size: 25px;
+      font-size: 36px;
       margin: 5px 10px 0 20px;
       padding: 0;
   }
