@@ -119,14 +119,14 @@ function updateDataValues() {
 <template>
     <div class = chart-container>
         <button class = "chart-container__button" @click="updateDataValues">Refresh data</button>
-    <Bar
-    aria-label="Detailing topic breakdown"
-        id="my-chart-id"
-        :options="chartOptions"
-        :data="chartData"
-        :styles="chartStyles" 
-    /> 
-</div>
+        <Bar
+        aria-label="Detailing topic breakdown"
+            id="my-chart-id"
+            :options="chartOptions"
+            :data="chartData"
+            :styles="chartStyles" 
+        /> 
+    </div>
 </template>
 
 <style lang="scss" scoped>

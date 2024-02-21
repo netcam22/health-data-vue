@@ -9,12 +9,10 @@ const DONUT_TOTAL = 28;
 const randomNumber = ref(Math.floor(Math.random() * DONUT_TOTAL) + 1);
 
 const donutData = {
-datasets: [
-    {
+datasets: [{
         backgroundColor: ['#DDDDDD', '#F68B15'],
         data: [randomNumber.value, DONUT_TOTAL-randomNumber.value]
-    }
-]
+    }]
 }
 
 const donutOptions = {
@@ -30,7 +28,7 @@ const donutOptions = {
                 formatter: function(value) {
                 return value.toString()+"/28";
                 },
-                color: "#000",
+                color: "#666666",
                 anchor: "start",
                 align: "top",
                 font: {
@@ -54,11 +52,12 @@ const donutStyles = {
 
 <template>
     <div class = "donut-container">
-    <Doughnut :data="donutData" 
-    :options="donutOptions" 
-    :styles="donutStyles" 
-    @click="updateRandomNumber"/>
-</div>
+        <Doughnut :data="donutData" 
+        aria-label="Calls this month"
+        :options="donutOptions" 
+        :styles="donutStyles" 
+        @click="updateRandomNumber"/>
+    </div>
 </template>
 
 <style lang="scss" scoped>

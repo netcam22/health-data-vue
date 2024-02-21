@@ -8,9 +8,9 @@ from '@/data/callData';
   <section class = "overview">
     <h1 class = "overview__heading">{{title}}</h1>
     <div class = "overview__container">
-    <h2 class = "overview__sub-heading">{{ callTitle }}</h2>
-    <h2 class = "overview__sub-heading">{{ donutTitle }}</h2>
-  </div>
+      <h2 class = "overview__sub-heading">{{ callTitle }}</h2>
+      <h2 class = "overview__sub-heading">{{ donutTitle }}</h2>
+    </div>
     <TheOverview 
     :title="title" 
     :callTitle="callTitle"

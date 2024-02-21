@@ -6,9 +6,9 @@ defineProps({
 </script>
 
 <template>
-      <h2 class="heading">{{ title }}:</h2>
-      <ul class = "call-item">
-      <li class = "call-item__text" v-for="(text, index) in content" :key="index" >
+  <h2 class="heading">{{ title }}:</h2>
+  <ul class = "call-item">
+    <li class = "call-item__text" v-for="(text, index) in content" :key="index" >
       {{ text }}
     </li>
   </ul>
