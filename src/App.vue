@@ -1,7 +1,8 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterView } from 'vue-router';
+import NavButton from '@/components/NavButton.vue';
 const clientName = "Andy Repp";
-const menuItems = ["Metrics", "Overview", "Detailing", "Calls", "Information", "About Profiles", "Detailing Targets"];
+import {menuItems} from '@/data/globalData';
 </script>
 
 <template>
@@ -9,13 +10,11 @@ const menuItems = ["Metrics", "Overview", "Detailing", "Calls", "Information", "
       <nav class="sidebar">
         <div class = "sidebar__list">
         <h1 class="sidebar__name">Welcome, {{ clientName }}</h1>
-        <RouterLink class="sidebar__link" to="/metrics"><button class="sidebar__item">Metrics</button></RouterLink>
-        <RouterLink class="sidebar__link" to="/overview"><button class="sidebar__item">Overview</button></RouterLink>
-        <RouterLink class="sidebar__link" to="/detailing"><button class="sidebar__item">Detailing</button></RouterLink>
-        <RouterLink class="sidebar__link" to="/calls"><button class="sidebar__item">Calls</button></RouterLink>
-        <RouterLink class="sidebar__link" to="/information"><button class="sidebar__item">Information</button></RouterLink>
-        <RouterLink class="sidebar__link" to="/about-profiles"><button class="sidebar__item">About Profiles</button></RouterLink>
-        <RouterLink class="sidebar__link" to="/detailing-targets"><button class="sidebar__item">Detailing Targets</button></RouterLink>
+        <NavButton v-for="(navItem, route, index) in menuItems"
+        :key="index"
+        :route="route"
+        :text="navItem"
+        />
       </div>
       </nav>
   <RouterView />
@@ -23,7 +22,6 @@ const menuItems = ["Metrics", "Overview", "Detailing", "Calls", "Information", "
 </template>
 
 <style lang="scss" scoped>
-
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -59,23 +57,5 @@ const menuItems = ["Metrics", "Overview", "Detailing", "Calls", "Information", "
     font-weight: normal;
     opacity: 100%;
   }
-  &__item {
-    color: $white;
-    background-color: transparent;
-    text-decoration: none;
-    font-size: 36px;
-    margin: 2% 0;
-    padding: 0 5%;
-    font-weight: normal;
-    opacity: 100%;
-    border: none;
-    cursor: pointer;
-  }
-
-  &__link:hover {
-    background-color:  $sidebar-hover;
-    font-weight: bold;
-  }
-  
 }
 </style>

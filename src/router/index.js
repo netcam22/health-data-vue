@@ -35,13 +35,13 @@ const router = createRouter({
       component: () => import('../views/PlaceholderView.vue')
     },
     {
-      path: '/about-profiles',
-      name: 'about-profiles',
+      path: '/about_profiles',
+      name: 'about_profiles',
       component: () => import('../views/PlaceholderView.vue')
     },
     {
-      path: '/detailing-targets',
-      name: 'detailing-targets',
+      path: '/detailing_targets',
+      name: 'detailing_targets',
       component: () => import('../views/PlaceholderView.vue')
     }
   ]
