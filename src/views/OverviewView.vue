@@ -1,6 +1,7 @@
 <script setup>
 import TheOverview from '@/components/TheOverview.vue';
 const title = "Overview";
+const chartTitle = "Detailing topic breakdown";
 const overviewData = {
       Date: ["Tomorrow, 3pm", "18 February 2023"],
       Account: ["Dr. Clinton Ackerman"],
@@ -11,17 +12,19 @@ const overviewData = {
 
 <template>
   <section class = "overview">
-    <TheOverview :title="title" :data="overviewData"/>
+    <TheOverview 
+    :title="title" 
+    :chartTitle="chartTitle" 
+    :data="overviewData"/>
   </section>
 </template>
 
-<style>
-@media (min-width: 1024px) {
+<style lang = "scss" scoped>
   .overview {
     flex-basis: 70%;
+    min-width: 70vw;
     box-sizing: border-box;
     flex-direction: column;
     align-items: flex-start;
   }
-}
 </style>

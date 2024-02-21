@@ -3,6 +3,7 @@ import CallItem from './CallItem.vue';
 import DataChart from './DataChart.vue';
 defineProps({
     title: String,
+    chartTitle: String,
     data: {
       Date: Array,
       Account: Array,
@@ -20,6 +21,7 @@ defineProps({
     :title="key"
     :content="item"
     />
+    <h2>{{ chartTitle }}</h2>
     <DataChart />
 </template>
 
