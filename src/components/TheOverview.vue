@@ -1,9 +1,12 @@
 <script setup>
 import CallItem from './CallItem.vue';
 import DataChart from './DataChart.vue';
+import DonutChart from './DonutChart.vue';
 defineProps({
     title: String,
+    callTitle: String,
     chartTitle: String,
+    donutTitle: String,
     data: {
       Date: Array,
       Account: Array,
@@ -14,7 +17,6 @@ defineProps({
 </script>
 
 <template>
-    <h1>{{title}}</h1>
     <div class = "data-wrapper">
     <div class = "data-wrapper__call">
     <CallItem
@@ -24,9 +26,9 @@ defineProps({
     :content="item"
     />
   </div>
-    <img src="./../assets/donut.JPG"/>
+    <DonutChart/>
   </div>
-    <h2>{{ chartTitle }}</h2>
+    <h2 class = "chart-heading">{{ chartTitle }}</h2>
     <DataChart />
 </template>
 
@@ -46,7 +48,9 @@ defineProps({
     align-items: baseline;
   }
 }
-img {
-  flex-basis: 40%;
-}
+.chart-heading {
+      font-size: 25px;
+      margin: 5px 10px 0 20px;
+      padding: 0;
+  }
 </style>
