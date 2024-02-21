@@ -4,7 +4,7 @@
 <template>
   <main>
     <section class = "container">
-    <h1>Placeholder view</h1>
+    <h1 class = "container__heading">Placeholder view</h1>
   </section>
   </main>
 </template>
@@ -16,5 +16,8 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 5%;
+    &__heading {
+      font-size: 56px;
+    }
   }
 </style>

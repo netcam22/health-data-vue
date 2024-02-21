@@ -18,18 +18,18 @@ defineProps({
 
 <template>
     <div class = "data-wrapper">
-    <div class = "data-wrapper__call">
-    <CallItem
-    v-for="(item, key, index) in data"
-    :key="index"
-    :title="key"
-    :content="item"
-    />
+      <div class = "data-wrapper__call">
+        <CallItem
+        v-for="(item, key, index) in data"
+        :key="index"
+        :title="key"
+        :content="item"
+        />
+      </div>
+      <DonutChart/>
   </div>
-    <DonutChart/>
-  </div>
-    <h2 class = "chart-heading">{{ chartTitle }}</h2>
-    <DataChart />
+  <h2 class = "chart-heading">{{ chartTitle }}</h2>
+  <DataChart />
 </template>
 
 <style lang="scss" scoped>
@@ -49,7 +49,7 @@ defineProps({
   }
 }
 .chart-heading {
-      font-size: 25px;
+      font-size: 36px;
       margin: 5px 10px 0 20px;
       padding: 0;
   }

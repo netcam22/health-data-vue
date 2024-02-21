@@ -8,9 +8,9 @@ from '@/data/callData';
   <section class = "overview">
     <h1 class = "overview__heading">{{title}}</h1>
     <div class = "overview__container">
-    <h2 class = "overview__sub-heading">{{ callTitle }}</h2>
-    <h2 class = "overview__sub-heading">{{ donutTitle }}</h2>
-  </div>
+      <h2 class = "overview__sub-heading">{{ callTitle }}</h2>
+      <h2 class = "overview__sub-heading">{{ donutTitle }}</h2>
+    </div>
     <TheOverview 
     :title="title" 
     :callTitle="callTitle"
@@ -32,13 +32,13 @@ from '@/data/callData';
     }
 
     &__heading {
-      font-size: 25px;
+      font-size:56px;
       margin: 20px 10px 20px 20px;
       padding: 0;
     }
 
     &__sub-heading {
-      font-size: 25px;
+      font-size: 36px;
       margin: 5px 10px 10px 20px;
       padding: 0;
     }
