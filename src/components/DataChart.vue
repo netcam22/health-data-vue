@@ -2,21 +2,24 @@
 import {ref, computed} from 'vue';
 import { Bar } from 'vue-chartjs';
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+ChartJS.register(ChartDataLabels);
 import usePercentageArray from './../composables/usePercentageArray.js';
+import { OPTIONS_LABELS, LEGEND_LABELS } from '@/data/chartData';
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale);
 
-const OPTIONS_LABELS = ref(['Adherence', 'Combination therapy', 'Dosing', 'Guidelines', 'Safety', 'Other']);
-const LEGEND_LABELS = ref(['Avg. all', 'Cautious', 'Complacent', 'Confident']);
+const OPTIONS = ref(OPTIONS_LABELS);
+const LEGEND = ref(LEGEND_LABELS);
 
 const refeshChartCount = ref(0);
 
 const optionsData = computed(() => usePercentageArray(
-    OPTIONS_LABELS.value.length-1, LEGEND_LABELS.value.length, refeshChartCount.value));
+    OPTIONS.value.length-1, LEGEND.value.length, refeshChartCount.value));
 
 const chartData = computed(() => {
     return {
-        labels: LEGEND_LABELS.value,
+        labels: LEGEND.value,
         datasets: optionsData.value
     }
 });
@@ -41,6 +44,14 @@ const chartOptions = computed(() => {
                 pointStyle: 'rectRot'
             }
         },
+        layout: {
+            padding: {
+                left: 50,
+                right: 24,
+                top: 12,
+                bottom: 12
+            },
+        },
         scales: {
             x: {
                 display: false,
@@ -50,7 +61,7 @@ const chartOptions = computed(() => {
                 }
             },
             y: {
-                display: true,
+                display: false,
                 stacked: true,
                 grid: {
                     display: false
@@ -58,11 +69,28 @@ const chartOptions = computed(() => {
             }
         },
         plugins: {
+            datalabels: {
+                formatter: function(value, context) {
+                return context.chart.data.labels[context.dataIndex];
+                },
+                color: "#000",
+                anchor: "start",
+                align: "top",
+                offset: "10",
+                clip: false,
+                display: function(context) {
+                    return context.datasetIndex === 0;
+                }
+            },
             legend: {
                 display: true,
                 position: 'top',
                 labels: {
                     usePointStyle: true,
+                    font: {
+                        size: 18
+                    },
+                    padding: 10
                 },
             },
             tooltip: {
@@ -72,7 +100,7 @@ const chartOptions = computed(() => {
                 yAlign: "top",
                 bodyColor: "black",
                 bodyFont: {
-                    size: 20
+                    size: 18
                 },
                 callbacks: {
                     label: ((tooltipItems) => {
@@ -95,6 +123,7 @@ function updateDataValues() {
 <template>
     <div class = chart-container>
     <Bar
+    aria-label="Detailing topic breakdown"
         id="my-chart-id"
         :options="chartOptions"
         :data="chartData"
@@ -108,9 +137,27 @@ function updateDataValues() {
 
 .chart-container {
     position: relative;
-    height: 40vh;
-    width: 70vw;
-    padding: 2vw;
+    height: 50vh;
+    min-width: 60vw;
+    flex-basis: 60%;
+    flex-grow: 3;
+    padding: 1vw;
+
+    @include respond-small {
+        height: 70vh;
+    }
+
+    @include respond-medium {
+        height: 60vh;
+    }
+
+    @include respond-large {
+        height: 50vh;
+    }
+
+    @include respond-x-large {
+        height: 40vh;
+    }
 }
 
 </style>

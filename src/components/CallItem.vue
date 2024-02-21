@@ -14,11 +14,11 @@ defineProps({
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .heading {
-  color: #333333;
+  color: $dark-text;
 }
 .text {
-  color: #333333;
+  color: $dark-text;
 }
 </style>

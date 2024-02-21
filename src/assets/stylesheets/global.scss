@@ -1,0 +1,22 @@
+$body-background: #F5F5F5;
+$sidebar-background: #333333;
+$global-grey: #DDDDDD;
+$sidebar-hover: rgba(255, 255, 255, 0.2);
+$white: #FFF;
+$dark-text: #333333;
+
+@mixin respond-small {
+    @media (min-width: 600px) { @content };
+}
+    
+@mixin respond-medium {
+    @media (min-width: 768px) { @content };
+}
+    
+@mixin respond-large {
+    @media (min-width: 992px) { @content };
+}
+    
+@mixin respond-x-large {
+    @media (min-width: 1200px) { @content };
+}
