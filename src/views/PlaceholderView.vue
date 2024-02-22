@@ -15,8 +15,8 @@
     min-width: 70vw;
     flex-direction: column;
     align-items: flex-start;
-    padding: 5%;
     &__heading {
+      padding: 5%;
       font-size: $heading-one-size;
     }
   }

@@ -52,8 +52,7 @@ const donutStyles = {
 
 <template>
     <div class = "donut-container" aria-labelledby="call-donut">
-        <Doughnut :data="donutData" 
-        aria-label="Calls this month"
+        <Doughnut :data="donutData"
         :options="donutOptions" 
         :styles="donutStyles" />
     </div>
