@@ -47,8 +47,8 @@ const chartOptions = computed(() => {
         },
         layout: {
             padding: {
-                left: 50,
-                right: 24,
+                left: 0,
+                right: 0,
                 top: 8,
                 bottom: 8
             },
@@ -79,7 +79,7 @@ const chartOptions = computed(() => {
                     color: "#000"
                 },
                 anchor: "start",
-                align: "top",
+                align: -45,
                 offset: "10",
                 clip: false,
                 display: function(context) {
@@ -156,7 +156,7 @@ function updateDataValues() {
         min-width: 60vw;
         flex-basis: 60%;
         flex-grow: 3;
-        padding: 0;
+        padding: 0 10px;
     }
     &__button {
         background-color: $white;
