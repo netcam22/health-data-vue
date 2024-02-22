@@ -46,7 +46,7 @@ defineProps({
   justify-content: space-between;
   align-items: baseline;
 
-  @include respond-small {
+  @include respond-medium {
     flex-direction: row;
   }
 
@@ -63,12 +63,12 @@ defineProps({
     padding: 0;
     &--text {
       font-size: $heading-two-size;
-      margin: 5px 10px 10px 20px;
+      margin: 0 10px 0 20px;
     }
     &--donut {
-        margin: 30px auto 0 auto;
+        margin: 0 auto;
         text-align: center;
-        @include respond-small {
+        @include respond-medium {
           margin: 0 auto;
         }
     }

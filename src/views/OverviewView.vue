@@ -29,7 +29,7 @@ from '@/data/callData';
 
     &__heading {
       font-size: $heading-one-size;
-      margin: 20px 10px 20px 20px;
+      margin: 5px 10px 10px 20px;
       padding: 0;
     }
   }

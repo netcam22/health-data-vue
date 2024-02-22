@@ -141,7 +141,7 @@ function updateDataValues() {
 .chart {
     &__heading {
         font-size: $heading-two-size;
-        margin: 5px 10px 0 20px;
+        margin: 0 10px 0 20px;
         padding: 0;
     }
     &__container {
@@ -150,7 +150,7 @@ function updateDataValues() {
         min-width: 60vw;
         flex-basis: 60%;
         flex-grow: 3;
-        padding: 1vw;
+        padding: 0;
         @include respond-small {
         height: 70vh;
         }
