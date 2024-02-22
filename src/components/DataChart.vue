@@ -147,7 +147,7 @@ function updateDataValues() {
         margin: 30px 10px 0 20px;
         padding: 0;
         @include respond-medium {
-            margin: 30px 10px 0 20px;
+            margin: 20px 10px 0 20px;
         }
     }
     &__container {
@@ -156,7 +156,7 @@ function updateDataValues() {
         min-width: 60vw;
         flex-basis: 60%;
         flex-grow: 3;
-        padding: 0 10px;
+        padding: 10px;
     }
     &__button {
         background-color: $white;
