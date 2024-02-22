@@ -3,6 +3,21 @@
 
 <template>
   <main>
-    <div>Home view</div>
+    <section class = "container">
+    <h1 class = "container__heading">Home view</h1>
+  </section>
   </main>
 </template>
+
+<style lang = "scss" scoped>
+  .container {
+    flex-basis: 70%;
+    min-width: 70vw;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5%;
+    &__heading {
+      font-size: 56px;
+    }
+  }
+</style>
