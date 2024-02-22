@@ -31,7 +31,7 @@ If I were to take on a similar task again, I would research and find examples of
 
 If the defined pixel sizes were specifically for the iPad pro and could be flexible for other devices, on reflection, I might have defined root pixel sizes to meet the criteria and then used rems in media queries for larger or smaller screen sizes. Alternatively, if an example of good practice in an organisation was available for reference, I would seek to understand the approach used and apply it to my practice.
 
-Because I have not been using Vue.js for long and have only previously briefly experimented with simple implementation of a charting library, I saw the task as a learning opportunity. For this reason, I did spend some additional time researching before starting the task. The Vue Mastery courses 'Vue for React Developers' were very useful and there is excellent documentation available both for Vue and Chart.js, both of which I found to be fantastic resources.
+Because I have not been using Vue.js for long and have only previously briefly experimented with simple implementation of a charting library, I saw the task as a learning opportunity. For this reason, I did spend some additional time researching before starting and while doing the task. The Vue Mastery courses 'Vue for React Developers' were very useful and there is excellent documentation available both for Vue and Chart.js, both of which I found to be fantastic resources.
 
 ## Project Setup
 
