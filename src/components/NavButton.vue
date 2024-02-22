@@ -17,7 +17,6 @@ defineProps({
 <style lang="scss" scoped>
 
 .link{
-
     &:hover {
     background-color:  $sidebar-hover;
     font-weight: bold;

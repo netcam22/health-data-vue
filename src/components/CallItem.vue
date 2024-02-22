@@ -19,7 +19,7 @@ defineProps({
 .call {
   &__heading {
     color: $dark-text;
-    margin: 5px 10px 0 20px;
+    margin: 0 10px 0 20px;
     padding: 0;
     font-size: $heading-two-size;
   }
@@ -29,10 +29,10 @@ defineProps({
   }
   &__text {
     color: $dark-text;
-    margin: 0 5px 0 5px;
+    margin: 0;
     padding: 0;
     line-height: 1.1;
-    font-size: 25px;
+    font-size: $paragraph-font-size;
     list-style-type: none;
   }
 }

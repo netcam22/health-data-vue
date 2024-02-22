@@ -27,7 +27,7 @@ import {menuItems} from '@/data/globalData';
   flex-direction: row;
   box-sizing: border-box;
   flex-direction: column;
-  @include respond-small {
+  @include respond-medium {
     flex-direction: row;
   }
 }
@@ -39,7 +39,7 @@ import {menuItems} from '@/data/globalData';
   background-color: $sidebar-background;
   min-height: 100vh;
   margin: 0;
-  padding: 2% 0;
+  padding: 10px 0;
   font-family: "Montserrat";
 
   &__list {
@@ -54,7 +54,6 @@ import {menuItems} from '@/data/globalData';
     color: $white;
     text-decoration: none;
     font-size: $heading-two-size;
-    line-height: 40px;
     text-wrap: wrap;
     margin: 0 0 25px 0;
     padding: 0 5%;

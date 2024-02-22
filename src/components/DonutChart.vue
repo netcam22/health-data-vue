@@ -19,7 +19,7 @@ const donutOptions = {
     responsive: true,
     maintainAspectRatio: false,
     cutout: "90%",
-    radius: "90%",
+    radius: "100%",
     plugins: {
         tooltip: {
             enabled: false
@@ -62,9 +62,11 @@ const donutStyles = {
 
 .donut-container {
     position: relative;
-    min-width: 30vw;
+    height: 408px;
+    width: 408px;
     flex-basis: 30%;
     flex-grow: 3;
+    margin: 0;
     padding: 0;
 }
 </style>
