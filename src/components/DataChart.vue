@@ -74,7 +74,10 @@ const chartOptions = computed(() => {
                 formatter: function(value, context) {
                 return context.chart.data.labels[context.dataIndex];
                 },
-                color: "#000",
+                font: {
+                    size: 18,
+                    color: "#000"
+                },
                 anchor: "start",
                 align: "top",
                 offset: "10",
@@ -141,28 +144,19 @@ function updateDataValues() {
 .chart {
     &__heading {
         font-size: $heading-two-size;
-        margin: 0 10px 0 20px;
+        margin: 30px 10px 0 20px;
         padding: 0;
+        @include respond-medium {
+            margin: 30px 10px 0 20px;
+        }
     }
     &__container {
         position: relative;
-        height: 50vh;
+        height: 360px;
         min-width: 60vw;
         flex-basis: 60%;
         flex-grow: 3;
         padding: 0;
-        @include respond-small {
-        height: 70vh;
-        }
-        @include respond-medium {
-            height: 60vh;
-        }
-        @include respond-large {
-            height: 50vh;
-        }
-        @include respond-x-large {
-            height: 40vh;
-        }
     }
     &__button {
         background-color: $white;
