@@ -7,11 +7,11 @@ defineProps({
 
 <template>
   <h2 class="call__heading">{{ title }}:</h2>
-  <ul class = "call__item">
-    <li class = "call__text" v-for="(text, index) in content" :key="index" >
+  <div class = "call__item">
+    <p class = "call__text" v-for="(text, index) in content" :key="index" >
       {{ text }}
-    </li>
-  </ul>
+    </p>
+  </div>
 </template>
 
 <style lang="scss" scoped>
