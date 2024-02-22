@@ -6,9 +6,9 @@ defineProps({
 </script>
 
 <template>
-  <h2 class="heading">{{ title }}:</h2>
-  <ul class = "call-item">
-    <li class = "call-item__text" v-for="(text, index) in content" :key="index" >
+  <h2 class="call__heading">{{ title }}:</h2>
+  <ul class = "call__item">
+    <li class = "call__text" v-for="(text, index) in content" :key="index" >
       {{ text }}
     </li>
   </ul>
@@ -16,15 +16,17 @@ defineProps({
 
 <style lang="scss" scoped>
 
-.heading {
-  color: $dark-text;
-  margin: 5px 10px 0 20px;
-  padding: 0;
-  font-size: 36px;
+.call {
+  &__heading {
+    color: $dark-text;
+    margin: 5px 10px 0 20px;
+    padding: 0;
+    font-size: $heading-two-size;
   }
-.call-item {
-  padding: 0 0 0 5px;
-  margin: 0;
+  &__item {
+    padding: 0 0 0 5px;
+    margin: 0;
+  }
   &__text {
     color: $dark-text;
     margin: 0 5px 0 5px;

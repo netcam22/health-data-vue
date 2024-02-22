@@ -8,13 +8,12 @@ from '@/data/callData';
   <section class = "overview">
     <h1 class = "overview__heading">{{title}}</h1>
     <div class = "overview__container">
-      <h2 class = "overview__sub-heading">{{ callTitle }}</h2>
-      <h2 class = "overview__sub-heading">{{ donutTitle }}</h2>
+      <h2 id="call-title" class = "overview__sub-heading">{{ callTitle }}</h2>
+      <h2 id="call-donut" class = "overview__sub-heading">{{ donutTitle }}</h2>
     </div>
     <TheOverview 
     :title="title" 
     :callTitle="callTitle"
-    :donutTitle="donutTitle"
     :chartTitle="chartTitle" 
     :data="overviewData"/>
   </section>
@@ -32,13 +31,13 @@ from '@/data/callData';
     }
 
     &__heading {
-      font-size:56px;
+      font-size: $heading-one-size;
       margin: 20px 10px 20px 20px;
       padding: 0;
     }
 
     &__sub-heading {
-      font-size: 36px;
+      font-size: $heading-two-size;
       margin: 5px 10px 10px 20px;
       padding: 0;
     }

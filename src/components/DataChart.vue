@@ -7,6 +7,10 @@ ChartJS.register(ChartDataLabels);
 import usePercentageArray from './../composables/usePercentageArray.js';
 import { OPTIONS_LABELS, LEGEND_LABELS } from '@/data/chartData';
 
+defineProps({
+    chartTitle: String,
+})
+
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale);
 
 const OPTIONS = ref(OPTIONS_LABELS);
@@ -45,8 +49,8 @@ const chartOptions = computed(() => {
             padding: {
                 left: 50,
                 right: 24,
-                top: 12,
-                bottom: 12
+                top: 8,
+                bottom: 8
             },
         },
         scales: {
@@ -117,8 +121,10 @@ function updateDataValues() {
 </script>
 
 <template>
-    <div class = chart-container>
-        <button class = "chart-container__button" @click="updateDataValues">Refresh data</button>
+    <div class = "chart">
+    <h2 class = "chart__heading">{{ chartTitle }}</h2>
+    <div class = chart__container>
+        <button class = "chart__button" @click="updateDataValues">Refresh data</button>
         <Bar
         aria-label="Detailing topic breakdown"
             id="my-chart-id"
@@ -127,18 +133,37 @@ function updateDataValues() {
             :styles="chartStyles" 
         /> 
     </div>
+</div>
 </template>
 
 <style lang="scss" scoped>
 
-.chart-container {
-    position: relative;
-    height: 50vh;
-    min-width: 60vw;
-    flex-basis: 60%;
-    flex-grow: 3;
-    padding: 1vw;
-
+.chart {
+    &__heading {
+        font-size: $heading-two-size;
+        margin: 5px 10px 0 20px;
+        padding: 0;
+    }
+    &__container {
+        position: relative;
+        height: 50vh;
+        min-width: 60vw;
+        flex-basis: 60%;
+        flex-grow: 3;
+        padding: 1vw;
+        @include respond-small {
+        height: 70vh;
+        }
+        @include respond-medium {
+            height: 60vh;
+        }
+        @include respond-large {
+            height: 50vh;
+        }
+        @include respond-x-large {
+            height: 40vh;
+        }
+    }
     &__button {
         background-color: $white;
         border: 1px solid $dark-text;
@@ -151,22 +176,6 @@ function updateDataValues() {
         &:hover {
             background-color: $global-grey;
         }
-    }
-
-    @include respond-small {
-        height: 70vh;
-    }
-
-    @include respond-medium {
-        height: 60vh;
-    }
-
-    @include respond-large {
-        height: 50vh;
-    }
-
-    @include respond-x-large {
-        height: 40vh;
     }
 }
 
