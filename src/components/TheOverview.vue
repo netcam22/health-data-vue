@@ -4,7 +4,7 @@ import DataChart from './DataChart.vue';
 import DonutChart from './DonutChart.vue';
 defineProps({
     title: String,
-    callTitle: String,
+    donutTitle: String,
     chartTitle: String,
     data: {
       Date: Array,
@@ -22,9 +22,11 @@ defineProps({
         v-for="(item, key, index) in data"
         :key="index"
         :title="key"
+        :donutTitle="donutTitle"
         :content="item"
         />
       </div>
+      <h2 id="call-donut" class = "call__sub-heading">{{ donutTitle }}</h2>
       <DonutChart/>
   </div>
   <DataChart :chartTitle="chartTitle"/>
@@ -33,10 +35,13 @@ defineProps({
 <style lang="scss" scoped>
 .call {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-basis: 40%;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  @include respond-small {
+    flex-direction: row;
+  }
 
   &__wrapper {
     flex-basis: 40%;
@@ -45,5 +50,15 @@ defineProps({
     grid-template-columns: 1fr 1fr;
     align-items: baseline;
   }
+
+  &__sub-heading {
+      font-size: $heading-two-size;
+      margin: 30px 10px 10px 20px;
+      padding: 0;
+      display: block;
+      @include respond-small {
+        display: none;
+      }
+    }
 }
 </style>

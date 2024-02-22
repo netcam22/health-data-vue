@@ -13,7 +13,7 @@ from '@/data/callData';
     </div>
     <TheOverview 
     :title="title" 
-    :callTitle="callTitle"
+    :donutTitle="donutTitle"
     :chartTitle="chartTitle" 
     :data="overviewData"/>
   </section>
@@ -40,6 +40,10 @@ from '@/data/callData';
       font-size: $heading-two-size;
       margin: 5px 10px 10px 20px;
       padding: 0;
+      display: none;
+      @include respond-small {
+        display: block;
+      }
     }
   }
 </style>

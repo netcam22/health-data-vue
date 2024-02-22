@@ -26,6 +26,10 @@ import {menuItems} from '@/data/globalData';
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
+  flex-direction: column;
+  @include respond-small {
+    flex-direction: row;
+  }
 }
 .sidebar {
   flex-basis: 15%;
