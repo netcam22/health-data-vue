@@ -65,6 +65,6 @@ const donutStyles = {
     min-width: 30vw;
     flex-basis: 30%;
     flex-grow: 3;
-    padding: 1vw;
+    padding: 0;
 }
 </style>
