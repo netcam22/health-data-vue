@@ -144,10 +144,10 @@ function updateDataValues() {
 .chart {
     &__heading {
         font-size: $heading-two-size;
-        margin: 30px 10px 0 20px;
+        margin: 30px 10px 0 $standard-spacing;
         padding: 0;
         @include respond-medium {
-            margin: 20px 10px 0 20px;
+            margin: 20px 10px 0 $standard-spacing;
         }
     }
     &__container {
@@ -163,7 +163,7 @@ function updateDataValues() {
         border: 1px solid $dark-text;
         padding: 5px;
         font-size: 15px;
-        margin: 2px 2px 2px 25px;
+        margin: 2px 2px 2px $standard-spacing;
         border-radius: 10px;
         cursor: pointer;
 

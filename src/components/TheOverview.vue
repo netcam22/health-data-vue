@@ -64,10 +64,10 @@ defineProps({
     padding: 0;
     &--text {
       font-size: $heading-two-size;
-      margin: 10px 10px 10px 20px;
+      margin: 10px 10px 10px $standard-spacing;
     }
     &--donut {
-        margin: 30px auto 10px auto;
+        margin: $standard-spacing auto 10px auto;
         text-align: center;
         @include respond-medium {
           margin: 10px auto;
