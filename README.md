@@ -48,3 +48,8 @@ npm run dev
 ```sh
 npm run build
 ```
+### Preview Production build
+
+```sh
+npm run preview
+```
