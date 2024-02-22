@@ -17,6 +17,8 @@ I found the biggest challenge to be fitting the charts into the page with their 
 
 I was unsure about whether using media queries would be acceptable in such a task. If so, I might have changed font and chart sizes for devices other than the iPad Pro it is intended for. I decided to compromise and apply the defined font sizes, while making the charts responsive to enable the layout to display effectively in the iPad pro.
 
+Having used stacked bar charts, I struggled to find a good way to add a title to the top of each bar. My method of only displaying the first data label and moving it above each bar did not seem to be a great solution. I wondered it if might have been preferable to create 4 different charts with the titles above each chart and then hide the legend for all except the top chart. This method would have also opened up the option to define a fixed height for each chart as specified.
+
 I did not have enough time to research a method for putting the call data in the centre of the donut chart. I would have liked to experiment with implementing this, given more time.
 
 ## What learnings will you carry forward?
