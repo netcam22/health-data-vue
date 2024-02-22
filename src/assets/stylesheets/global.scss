@@ -25,6 +25,7 @@ $heading-two-size: 36px;
 $nav-button-size: 36px;
 $paragraph-font-size: 36px;
 $nav-button-height: 120px;
+$standard-spacing: 24px;
 
 @mixin respond-small {
     @media (min-width: 600px) { @content };

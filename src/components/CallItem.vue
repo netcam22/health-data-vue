@@ -19,7 +19,7 @@ defineProps({
 .call {
   &__heading {
     color: $dark-text;
-    margin: 0 10px 0 20px;
+    margin: 0 10px 0 $standard-spacing;
     padding: 0;
     font-size: $heading-two-size;
   }

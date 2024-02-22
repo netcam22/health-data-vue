@@ -15,7 +15,7 @@ I enjoyed being able to use what I have been learning in Vue to fulfil the major
 
 I found the biggest challenge to be fitting the charts into the page with their specified pixel sizes, while also making the page responsive and usable in different devices.
 
-Having used stacked bar charts, I struggled to find a good way to add a title to the top of each bar. My method of only displaying the first data label and moving it above each bar did not seem to be a great solution. I wondered it if might have been preferable to create 4 different charts with the titles above each chart and then hide the legend for all except the top chart. This method would have also opened up the option to define a fixed height for each chart as specified, which I did not find an effective solution for.
+Having used stacked bar charts, I struggled to find a good way to either define the height of the chart or add a title to the top of each bar. My method of only displaying the first data label and moving it above each bar did not seem to be a great solution. I wondered it if might have been preferable to create 4 different charts with the titles above each chart and then hide the legend for all except the top chart. This method might have also opened up the option to define a fixed pixel height for the chart as specified, which I did not find an effective solution for.
 
 I did not have enough time to research a method for putting the call data in the centre of the donut chart. I would have liked to experiment with implementing this, given more time.
 
