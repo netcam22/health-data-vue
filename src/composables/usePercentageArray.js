@@ -1,9 +1,9 @@
-import useRandomData from "./useRandomData.js";
+import useRandomChartData from "./useRandomChartData.js";
 import { COLORS, OPTIONS_LABELS } from "@/data/chartData.js";
 
 const usePercentageArray = (valuesPerChart, noOfCharts, refeshChartCount) => {
 
-    const valuesArray = useRandomData(valuesPerChart, noOfCharts, refeshChartCount);
+    const valuesArray = useRandomChartData(valuesPerChart, noOfCharts, refeshChartCount);
 
     const getTotals = (array) => array[0].map((_, i) => array.reduce((acc, _, j) => 
     acc + array[j][i], 0));
