@@ -17,7 +17,7 @@ defineProps({
 
 <template>
     <div class = "call">
-      <div class = "call__wrapper">
+      <div class = "call__wrapper" aria-labelledby="call-title">
         <CallItem
         v-for="(item, key, index) in data"
         :key="index"

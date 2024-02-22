@@ -51,12 +51,11 @@ const donutStyles = {
 </script>
 
 <template>
-    <div class = "donut-container">
+    <div class = "donut-container" aria-labelledby="call-donut">
         <Doughnut :data="donutData" 
         aria-label="Calls this month"
         :options="donutOptions" 
-        :styles="donutStyles" 
-        @click="updateRandomNumber"/>
+        :styles="donutStyles" />
     </div>
 </template>
 
