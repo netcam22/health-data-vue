@@ -44,10 +44,11 @@ defineProps({
   flex-direction: column;
   flex-basis: 40%;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 
   @include respond-medium {
     flex-direction: row;
+    align-items: baseline;
   }
 
   &__wrapper {
@@ -63,13 +64,13 @@ defineProps({
     padding: 0;
     &--text {
       font-size: $heading-two-size;
-      margin: 0 10px 0 20px;
+      margin: 10px 10px 10px 20px;
     }
     &--donut {
-        margin: 0 auto;
+        margin: 30px auto 10px auto;
         text-align: center;
         @include respond-medium {
-          margin: 0 auto;
+          margin: 10px auto;
         }
     }
   }
