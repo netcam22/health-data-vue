@@ -27,8 +27,10 @@ defineProps({
     color: $white;
     background-color: transparent;
     text-decoration: none;
-    font-size: 36px;
-    margin: 2% 0;
+    font-size: $nav-button-size;
+    margin: 0;
+    width: 100%;
+    height: $nav-button-height;
     padding: 0 5%;
     font-weight: normal;
     opacity: 100%;

@@ -6,7 +6,6 @@ defineProps({
     title: String,
     callTitle: String,
     chartTitle: String,
-    donutTitle: String,
     data: {
       Date: Array,
       Account: Array,
@@ -17,8 +16,8 @@ defineProps({
 </script>
 
 <template>
-    <div class = "data-wrapper">
-      <div class = "data-wrapper__call">
+    <div class = "call">
+      <div class = "call__wrapper">
         <CallItem
         v-for="(item, key, index) in data"
         :key="index"
@@ -28,19 +27,18 @@ defineProps({
       </div>
       <DonutChart/>
   </div>
-  <h2 class = "chart-heading">{{ chartTitle }}</h2>
-  <DataChart />
+  <DataChart :chartTitle="chartTitle"/>
 </template>
 
 <style lang="scss" scoped>
-.data-wrapper {
+.call {
   display: flex;
   flex-direction: row;
   flex-basis: 40%;
   justify-content: space-between;
   align-items: flex-start;
 
-  &__call {
+  &__wrapper {
     flex-basis: 40%;
     display: grid;
     flex-direction: column;
@@ -48,9 +46,4 @@ defineProps({
     align-items: baseline;
   }
 }
-.chart-heading {
-      font-size: 36px;
-      margin: 5px 10px 0 20px;
-      padding: 0;
-  }
 </style>

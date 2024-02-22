@@ -14,7 +14,6 @@ from '@/data/callData';
     <TheOverview 
     :title="title" 
     :callTitle="callTitle"
-    :donutTitle="donutTitle"
     :chartTitle="chartTitle" 
     :data="overviewData"/>
   </section>
@@ -32,13 +31,13 @@ from '@/data/callData';
     }
 
     &__heading {
-      font-size:56px;
+      font-size: $heading-one-size;
       margin: 20px 10px 20px 20px;
       padding: 0;
     }
 
     &__sub-heading {
-      font-size: 36px;
+      font-size: $heading-two-size;
       margin: 5px 10px 10px 20px;
       padding: 0;
     }

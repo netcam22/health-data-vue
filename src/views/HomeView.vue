@@ -17,7 +17,7 @@
     align-items: flex-start;
     padding: 5%;
     &__heading {
-      font-size: 56px;
+      font-size: $heading-one-size;
     }
   }
 </style>
